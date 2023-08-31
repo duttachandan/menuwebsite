@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  overflow-x: hidden;
+  background: rgb(4, 4, 36);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-div{
+  height:100vh;
+  width:100vw;
+  background-color: transparent;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.flex{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+.cards{
+  height:500px;
+  width:300px;
+  display:flex;
+  justify-content:space-evenly;
+  gap:40px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow:hidden;
+  transition: 0.4s ease-in;
 }
-
-.App-link {
-  color: #61dafb;
+.cards:hover{
+  border-radius:5px;
+  box-shadow:0 0 15px skyblue;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cards:hover .cards-img img{
+  box-shadow: 0 0 10px snow;
+  border-radius:50%;
+}
+.cards-img{
+  height:50%;
+  width:90%;
+  margin-top:10px;
+  margin-inline:auto;
+  flex-basis:50%;
+}
+.cards-img img{
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  object-position:top;
+  transition:0.4s ease-in-out;
+}
+.content{
+  flex-basis:50%;
+  margin-inline:20px;
+  color:skyblue;
+}
+.cursor{
+  position: absolute;
+  height:50px;
+  width:50px;
+  background-color:whitesmoke;
+  border-radius:50%;
+  box-shadow: 5px 5px 500px rgb(188, 238, 252);
+  mix-blend-mode: difference;
+  filter:blur(5)
 }
